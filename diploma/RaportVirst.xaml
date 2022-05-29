@@ -1,0 +1,54 @@
+﻿<Window x:Class="diploma.RaportVirst"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:local="clr-namespace:diploma"
+        mc:Ignorable="d"
+         Height="450" Width="800" Closing="Window_Closing" WindowStartupLocation="CenterScreen" Title="Personalul de conducere și personalul didactic, pe grupe de vârstă" ResizeMode="CanMinimize" >
+    <Border CornerRadius="10" Grid.RowSpan="2">
+        <Border.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="#00a5f7" Offset="0.0"/>
+                <GradientStop Color="#0446be" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Grid>
+            <DataGrid Name="aloha" HorizontalAlignment="Left" AutoGenerateColumns="False" Height="303" VerticalAlignment="Top" Width="752" Margin="18,29,0,0">
+                <DataGrid.Columns >
+                    <DataGridTextColumn   Width="195" ElementStyle="{StaticResource WrapText}" Header="       "  Binding="{Binding descriere}"/>
+                    <DataGridTextColumn Header="Nr. rind" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="40"   Binding="{Binding rind}"/>
+                    <DataGridTextColumn Header="Total"  Binding="{Binding total}"/>
+                    <DataGridTextColumn Header="din care femei" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="60"  Binding="{Binding femei}"/>
+                    <DataGridTextColumn Header="Total sub 25" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="60"   Binding="{Binding total25}"/>
+                    <DataGridTextColumn Header="femei sub 25" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="60"  Binding="{Binding femei25}"/>
+                    <DataGridTextColumn Header="Total 25-29" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="60"  Binding="{Binding total2529}"/>
+                    <DataGridTextColumn Header="femei 25-29" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="60"  Binding="{Binding femei2529}"/>
+                    <DataGridTextColumn Header="Total 30-34" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="60"  Binding="{Binding total3034}"/>
+                    <DataGridTextColumn Header="femei 30-34" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="60"  Binding="{Binding femei3034}"/>
+                    <DataGridTextColumn Header="Total 35-39" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="60"  Binding="{Binding total3539}"/>
+                    <DataGridTextColumn Header="femei 35-39" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="60"  Binding="{Binding femei3539}"/>
+                    <DataGridTextColumn Header="Total 40-44" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="60"  Binding="{Binding total4044}"/>
+                    <DataGridTextColumn Header="femei 40-44" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="60"  Binding="{Binding femei4044}"/>
+                    <DataGridTextColumn Header="Total 45-49" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="60"  Binding="{Binding total4549}"/>
+                    <DataGridTextColumn Header="femei 45-49" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="60"  Binding="{Binding femei4549}"/>
+                    <DataGridTextColumn Header="Total 50-54" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="60"  Binding="{Binding total5054}"/>
+                    <DataGridTextColumn Header="femei 50-54" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="60"  Binding="{Binding femei5054}"/>
+                    <DataGridTextColumn Header="Total 55-59" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="60"  Binding="{Binding total5559}"/>
+                    <DataGridTextColumn Header="femei 55-59" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="60"  Binding="{Binding femei5559}"/>
+                    <DataGridTextColumn Header="Total 60-64" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="60"  Binding="{Binding total6064}"/>
+                    <DataGridTextColumn Header="femei 60-64" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="60"  Binding="{Binding femei6064}"/>
+                    <DataGridTextColumn Header="Total peste 65" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="60"  Binding="{Binding total65}"/>
+                    <DataGridTextColumn Header="femei peste 65" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="60"  Binding="{Binding femei65}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button Name="Export" Style="{StaticResource but}"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="99" Margin="338,357,0,0" Height="37" Click="Export_Click" >
+                <StackPanel Orientation="Horizontal">
+                    <iconPacks:PackIconMaterial Kind="FileExcel" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <Label FontWeight="Light" FontFamily="helvetica" Foreground="White" FontSize="14" Content="Export"/>
+                </StackPanel>
+            </Button>
+        </Grid>
+    </Border>
+</Window>

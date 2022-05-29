@@ -1,0 +1,50 @@
+﻿<Window x:Class="diploma.Raport4"
+              xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:diploma"
+        mc:Ignorable="d"
+        Title="Raport pe Personal" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Closing="Window_Closing" Height="450" Width="800">
+    <Border CornerRadius="10" Grid.RowSpan="2">
+        <Border.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="#00a5f7" Offset="0.0"/>
+                <GradientStop Color="#0446be" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Border.Background>
+
+        <Grid>
+            <DataGrid Name="RaportGrid" HorizontalAlignment="Left" AutoGenerateColumns="False" Height="303" VerticalAlignment="Top" Width="752" Margin="18,29,0,0">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Nr. total de personal aprobat în state" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}"   Width="100" ElementStyle="{StaticResource WrapText}" Binding="{Binding NrUnitTotal}"/>
+                    <DataGridTextColumn Header="Nr. total de personal" Width="60" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}"  Binding="{Binding NrPersTot}"/>
+                    <DataGridTextColumn Header="bărbați" Width="50" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}"  Binding="{Binding BarbTot}"/>
+                    <DataGridTextColumn Header="femei" Width="50"  Binding="{Binding FemTot}"/>
+                    <DataGridTextColumn Header="Nr. de personal de conducere aprobate în state de personal" Width="100"  HeaderStyle="{StaticResource WrappedColumnHeaderStyle}"  Binding="{Binding Cond}"/>
+                    <DataGridTextColumn Header="Nr. de personal" Width="60"  HeaderStyle="{StaticResource WrappedColumnHeaderStyle}"  Binding="{Binding CondPers}"/>
+                    <DataGridTextColumn Header="Nr. de personal de conducere cu grad managerial" Width="100"  HeaderStyle="{StaticResource WrappedColumnHeaderStyle}"  Binding="{Binding CondMan}"/>
+                    <DataGridTextColumn Header="Nr. de personal didactic aprobate în state de personal" Width="100"  HeaderStyle="{StaticResource WrappedColumnHeaderStyle}"  Binding="{Binding Did}"/>
+                    <DataGridTextColumn Header="Nr. de persone titulare" Width="60"  HeaderStyle="{StaticResource WrappedColumnHeaderStyle}"  Binding="{Binding DidTit}"/>
+                    <DataGridTextColumn Header="Nr. de persoane didactice angjate prin cumul" Width="100"  HeaderStyle="{StaticResource WrappedColumnHeaderStyle}"  Binding="{Binding DidCum}"/>
+                    <DataGridTextColumn Header="Nr. de persoane didactice de vârstă pensionară" Width="100"  HeaderStyle="{StaticResource WrappedColumnHeaderStyle}"  Binding="{Binding DidPens}"/>
+                    <DataGridTextColumn Header="Nr. de unutăți aprobate în state de personal" Width="100"  HeaderStyle="{StaticResource WrappedColumnHeaderStyle}"  Binding="{Binding UnitTot2}"/>
+                    <DataGridTextColumn Header="Nr. de persoane" Width="100"  HeaderStyle="{StaticResource WrappedColumnHeaderStyle}"  Binding="{Binding Nrdeunitpers}"/>
+                    <DataGridTextColumn Header="Nr. de personal didactic auxeliar aprobat în state de personal" Width="100"  HeaderStyle="{StaticResource WrappedColumnHeaderStyle}"  Binding="{Binding AuxNrTot}"/>
+                    <DataGridTextColumn Header="Nr. de persoane" Width="100"  HeaderStyle="{StaticResource WrappedColumnHeaderStyle}"  Binding="{Binding TotPersNedidact}"/>
+                    <DataGridTextColumn Header="Nr. de personal nedidactic aprobate în state de personal" Width="100"  HeaderStyle="{StaticResource WrappedColumnHeaderStyle}"  Binding="{Binding NeDidTOt}"/>
+                    <DataGridTextColumn Header="Nr. de persoane" Width="100"  HeaderStyle="{StaticResource WrappedColumnHeaderStyle}"  Binding="{Binding AuxPers}"/>
+
+
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button Name="Export" Style="{StaticResource but}"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="99" Margin="338,357,0,0" Height="37" Click="Export_Click"  >
+                <StackPanel Orientation="Horizontal">
+                    <iconPacks:PackIconMaterial Kind="FileExcel" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <Label FontWeight="Light" FontFamily="helvetica" Foreground="White" FontSize="14" Content="Export"/>
+                </StackPanel>
+            </Button>
+        </Grid>
+    </Border>
+</Window>

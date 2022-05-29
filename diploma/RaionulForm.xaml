@@ -1,0 +1,69 @@
+﻿<Window x:Class="diploma.RaionulForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:local="clr-namespace:diploma"
+        ResizeMode="CanMinimize"
+        mc:Ignorable="d"
+        Title="Gestionarea Raionului" Height="300" Width="400" Closing="Window_Closing" WindowStartupLocation="CenterScreen">
+    <Border  Grid.RowSpan="2">
+        <Border.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="#00a5f7" Offset="0.0"/>
+                <GradientStop Color="#0446be" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Grid>
+            <Grid>
+                <DataGrid Name="raionul" HorizontalAlignment="Left" Height="217" Margin="17,24,0,0" VerticalAlignment="Top" Width="158"  FontSize="16">
+                    <DataGrid.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Modifica" Click="Modifica"  />
+                            <MenuItem Header="Sterge" Click="Sterge"   />
+                        </ContextMenu>
+                    </DataGrid.ContextMenu>
+                </DataGrid>
+                <Label FontWeight="Light" FontFamily="helvetica" Foreground="White" FontSize="14" Content="Indicați denumirea raionului:" HorizontalAlignment="Left" Margin="198,81,0,0" VerticalAlignment="Top" Width="176"/>
+                <StackPanel Orientation="Vertical" Margin="217,108,36,136">
+                    <TextBox Name="rtext" HorizontalAlignment="Left" Height="16" Width="132" FontWeight="Light"
+                           FontFamily="helvetica"
+                           FontSize="14"
+                             BorderThickness="0"       
+                           Foreground="White"
+                         Background="Transparent"/>
+                    <Border Width="132" 
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+                </StackPanel>
+                <Button Style="{StaticResource but}" Name="AdaugRaion" HorizontalAlignment="Left" Margin="241,211,0,0" VerticalAlignment="Top" Width="95" Height="30" Click="AdaugRaion_Click" >
+                    <StackPanel Orientation="Horizontal">
+                        <iconPacks:PackIconMaterial Kind="DomainPlus" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        <Label Content="Adaugă" FontWeight="Light" FontFamily="helvetica" Foreground="White" FontSize="14"/>
+
+                    </StackPanel>
+                </Button>
+                <Button Style="{StaticResource but}" Name="ModificRaion"   HorizontalAlignment="Left" Margin="182,211,0,0"  VerticalAlignment="Top" Width="96" Height="30" Click="ModificRaion_Click"  Visibility="Hidden">
+                    <StackPanel Orientation="Horizontal">
+                        <iconPacks:PackIconMaterial Kind="Domain" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        <Label Content="Modifică" FontWeight="Light" FontFamily="helvetica" Foreground="White" FontSize="14"/>
+
+                    </StackPanel>
+                </Button>
+                <Button Style="{StaticResource but}"  Name="Anuleaza"   HorizontalAlignment="Left" Margin="283,211,0,0"  VerticalAlignment="Top" Width="95" Height="30" Click="Anuleaza_Click" Visibility="Hidden" >
+                    <StackPanel Orientation="Horizontal">
+                        <iconPacks:PackIconMaterial Kind="CloseThick" VerticalAlignment="Center" HorizontalAlignment="Center"  />
+                        <Label Content="Anulează" FontWeight="Light" FontFamily="helvetica" Foreground="White" FontSize="14"/>
+
+                    </StackPanel>
+
+                </Button>
+                <Label FontWeight="Light" FontFamily="helvetica" Foreground="White" FontSize="14" Content="Indicați localitatea:" HorizontalAlignment="Left" Margin="229,133,0,0" VerticalAlignment="Top"/>
+                <ComboBox HorizontalAlignment="Left" Margin="226,160,0,0" VerticalAlignment="Top" Width="120" Name="locbox" SelectedIndex="0"/>
+                <Image Source="img\ceefmd1.png" Margin="293,10,11,215" />
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

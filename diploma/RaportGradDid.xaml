@@ -1,0 +1,36 @@
+﻿<Window x:Class="diploma.RaportGradDid"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:diploma"
+        mc:Ignorable="d"
+        Title="Grade Didactice" Height="450" Width="800" Closing="Window_Closing" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Border CornerRadius="10" Grid.RowSpan="2">
+        <Border.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="#00a5f7" Offset="0.0"/>
+                <GradientStop Color="#0446be" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Border.Background>
+
+        <Grid>
+            <DataGrid Name="RaportGrid" HorizontalAlignment="Left" AutoGenerateColumns="False" Height="303" VerticalAlignment="Top" Width="752" Margin="18,29,0,0">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Gradul superior"   Width="195" ElementStyle="{StaticResource WrapText}" Binding="{Binding Superior}"/>
+                    <DataGridTextColumn Header="Gradul I" Width="195" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Binding="{Binding Gr1}"/>
+                    <DataGridTextColumn Header="Gradul II" Width="195" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}"  Binding="{Binding Gr2}"/>
+                    <DataGridTextColumn Header="Fără grad" Width="195"  Binding="{Binding Fara}"/>
+
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button Name="Export" Style="{StaticResource but}"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="99" Margin="338,357,0,0" Height="37" Click="Export_Click" >
+                <StackPanel Orientation="Horizontal">
+                    <iconPacks:PackIconMaterial Kind="FileExcel" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <Label FontWeight="Light" FontFamily="helvetica" Foreground="White" FontSize="14" Content="Export"/>
+                </StackPanel>
+            </Button>
+        </Grid>
+    </Border>
+</Window>

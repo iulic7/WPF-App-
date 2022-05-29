@@ -1,0 +1,6 @@
+Nume,Prenume,DataNasterii,Genul,Idnp,Email,Mobil,Functia,Catedra,GradDidactic,ModulAngajarii,Nationalitatea,Localitatea,VarstaPensionara,Institutia,Studii,StudiiManageriale,GradulManagerial,StudiiPedagogice,StagiulPedagogic,DataAngajaeii,DataEliberarii,VechimeInMunca,CazatCamin,Camin,Statutul,GradulStiintific,ConcediuTermenLung
+Zatica,Alexandru,28.04.1978,True,1847382572843,zatica.alexandru@gmail.com,069047582,Profesor,Informatica,Nu are,True,Moldovean,Chisinau Ciocana,False,IP CEEF,Superioare,False,nu este,True,0,01.01.2006,01.01.2006,13.34,False,-,nu stiu,Masterat,False
+Inculet,Liliana,08.03.1974,False,1847250282028,liliana.inculet@gmail.com,69435266,Profesor,Limba si comunicare,Nu are,True,Moldovean,Chisinau Botanica,False,IP CEEF,Superioare,False,,True,5,01.01.2006,01.01.1800,20.37,False,,nu stiu,Masterat,False
+Liseniuc,Adrian,12.02.2021,True,4532657643213,esgeg.egfeg@gmail.com,54632456,Profesor,Informatica,Gradul 2,True,Moldovean,Chisinau Buiucani,False,IP CEEF,Programist,True,maxim,True,24.54,01.01.2006,01.01.2006,39.91,False,,VIP,Masterat,True
+Ion,Denis,19.08.1999,True,9876543211231,zxcv@gmail.com,87654321,Sef Sectie,Contabilitate si analiza economica,Gradul Superior,False,Moldovean,Balti Cimislia,True,IP CEEF,Superiare,False,,False,4.8,01.03.2016,01.01.1800,10,True,3,stalker,Doctorat,True
+

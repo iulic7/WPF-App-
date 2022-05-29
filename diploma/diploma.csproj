@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0BD37B20-5017-4B18-9B67-A223514F4B2C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>diploma</RootNamespace>
+    <AssemblyName>diploma</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\ControlzEx.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.Material.4.8.0\lib\net46\MahApps.Metro.IconPacks.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Material, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.Material.4.8.0\lib\net46\MahApps.Metro.IconPacks.Material.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ActivitateaDidiact.xaml.cs">
+      <DependentUpon>ActivitateaDidiact.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Adauga.xaml.cs">
+      <DependentUpon>Adauga.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CatedraForm.xaml.cs">
+      <DependentUpon>CatedraForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Clase\Catedre.cs" />
+    <Compile Include="Clase\CatedreRaport.cs" />
+    <Compile Include="Clase\Disciplin.cs" />
+    <Compile Include="Clase\GradulDidactic.cs" />
+    <Compile Include="Clase\PersoanaFunc.cs" />
+    <Compile Include="Clase\PersonalDidactic.cs" />
+    <Compile Include="Clase\ProfDisc.cs" />
+    <Compile Include="Clase\Raport1.cs" />
+    <Compile Include="Clase\Raport2.cs" />
+    <Compile Include="Clase\Raport3Did.cs" />
+    <Compile Include="Clase\Raport4per.cs" />
+    <Compile Include="DisciplineForm.xaml.cs">
+      <DependentUpon>DisciplineForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormareContinua.xaml.cs">
+      <DependentUpon>FormareContinua.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FunctiaForm.xaml.cs">
+      <DependentUpon>FunctiaForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GradStiintific.xaml.cs">
+      <DependentUpon>GradStiintific.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InstitutiaForm.xaml.cs">
+      <DependentUpon>InstitutiaForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LocalitateForm.xaml.cs">
+      <DependentUpon>LocalitateForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MeniuPrin.xaml.cs">
+      <DependentUpon>MeniuPrin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NationalitateaForm.xaml.cs">
+      <DependentUpon>NationalitateaForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProfesorFunctie.xaml.cs">
+      <DependentUpon>ProfesorFunctie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProfsoriDiscipline.xaml.cs">
+      <DependentUpon>ProfsoriDiscipline.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RaionulForm.xaml.cs">
+      <DependentUpon>RaionulForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Raport4.xaml.cs">
+      <DependentUpon>Raport4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RaportAuxiliar.xaml.cs">
+      <DependentUpon>RaportAuxiliar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RaportCatedre.xaml.cs">
+      <DependentUpon>RaportCatedre.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RaportGradDid.xaml.cs">
+      <DependentUpon>RaportGradDid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RaportPersonal.xaml.cs">
+      <DependentUpon>RaportPersonal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RaportVirst.xaml.cs">
+      <DependentUpon>RaportVirst.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Regist.xaml.cs">
+      <DependentUpon>Regist.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StudiiForm.xaml.cs">
+      <DependentUpon>StudiiForm.xaml</DependentUpon>
+    </Compile>
+    <Page Include="ActivitateaDidiact.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Adauga.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CatedraForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="dezbutton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DisciplineForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormareContinua.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FunctiaForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GradStiintific.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InstitutiaForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LocalitateForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Clase\Activ.cs" />
+    <Compile Include="Clase\DenInst.cs" />
+    <Compile Include="Clase\FormCont.cs" />
+    <Compile Include="Clase\Functii.cs" />
+    <Compile Include="Clase\GrStiinte.cs" />
+    <Compile Include="Clase\Localit.cs" />
+    <Compile Include="Clase\Nationalit.cs" />
+    <Compile Include="Clase\Persoane.cs" />
+    <Compile Include="Clase\Raionull.cs" />
+    <Compile Include="Clase\Stagiu.cs" />
+    <Compile Include="Clase\Stud.cs" />
+    <Compile Include="Clase\Users.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MeniuPrin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NationalitateaForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProfesorFunctie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProfsoriDiscipline.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RaionulForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Raport4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RaportAuxiliar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RaportCatedre.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RaportGradDid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RaportPersonal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RaportVirst.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Regist.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StudiiForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\ceefm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\ceef.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\ceefmd1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

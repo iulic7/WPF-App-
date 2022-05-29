@@ -1,0 +1,70 @@
+﻿<Window x:Class="diploma.ActivitateaDidiact"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:diploma"
+        ResizeMode="CanMinimize"
+        mc:Ignorable="d"
+        Title="Activitatea Didactică" Height="450" Width="600" Closing="Window_Closing" WindowStartupLocation="CenterScreen">
+   
+    <Border CornerRadius="10" Grid.RowSpan="2">
+        <Border.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="#00a5f7" Offset="0.0"/>
+                <GradientStop Color="#0446be" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Grid Margin="0,0,-0.4,0">
+
+            <Image Source="img\ceefmd1.png" Margin="461,10,10,362"/>
+            <DataGrid HorizontalAlignment="Left" Name="actgrid" Height="369" Margin="26,24,0,0" VerticalAlignment="Top" Width="298">
+                <DataGrid.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Modifica" Click="Modifica"     />
+                        <MenuItem Header="Sterge" Click="Sterge"    />
+                    </ContextMenu>
+                </DataGrid.ContextMenu>
+            </DataGrid>
+            <Label Content="Introduceți activitatea didactică:" HorizontalAlignment="Left" Margin="358,134,0,0" VerticalAlignment="Top"
+                   FontWeight="Light"
+                           FontFamily="helvetica"
+                           Foreground="Wheat"
+                       FontSize="16"/>
+            <TextBox Name="atext" HorizontalAlignment="Left" Height="16" Margin="378,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" FontSize="14"
+                      FontWeight="Light"
+                           FontFamily="helvetica"
+
+                           BorderThickness="0"
+                           Foreground="White"
+                         Background="Transparent"/>
+            <Label Content="Alegeți profesorul" HorizontalAlignment="Left" Margin="402,206,0,0" VerticalAlignment="Top"
+                   FontWeight="Light"
+                           FontFamily="helvetica"
+                           Foreground="Wheat"
+                       FontSize="16"/>
+            <ComboBox Name="profesori" HorizontalAlignment="Left" Margin="378,251,0,0" VerticalAlignment="Top" Width="178"/>
+            <Button Name="AdaugaActiv" Style="{StaticResource but}" HorizontalAlignment="Left" Margin="402,351,0,0" VerticalAlignment="Top" Width="112" Click="AdaugaActiv_Click" Height="42" >
+                <StackPanel Orientation="Horizontal">
+                    <iconPacks:PackIconMaterial Kind="NotebookPlus" VerticalAlignment="Center" HorizontalAlignment="Center" Width="20" />
+                    <Label Content="Adaugă" FontWeight="Light" FontFamily="helvetica" Foreground="Wheat" FontSize="16" Width="63" />
+                </StackPanel>
+            </Button>
+            <Button Name="ModificActiv" Style="{StaticResource but}" HorizontalAlignment="Left" Margin="336,351,0,0" VerticalAlignment="Top" Width="112" Click="ModificActiv_Click" Height="42" Visibility="Hidden" >
+                <StackPanel Orientation="Horizontal">
+                    <iconPacks:PackIconMaterial Kind="NotebookEdit" VerticalAlignment="Center" HorizontalAlignment="Center" Width="20" />
+                    <Label Content="Modifica" FontWeight="Light" FontFamily="helvetica" Foreground="Wheat" FontSize="16" Width="68" />
+                </StackPanel>
+            </Button>
+            <Button Name="Anuleaza" Style="{StaticResource but}" HorizontalAlignment="Left" Margin="461,351,0,0" VerticalAlignment="Top" Width="112" Click="Anuleaza_Click" Height="42" Visibility="Hidden" >
+                <StackPanel Orientation="Horizontal">
+                    <iconPacks:PackIconMaterial Kind="CloseThick" VerticalAlignment="Center" HorizontalAlignment="Center" Width="20" />
+                    <Label Content="Anulează" FontWeight="Light" FontFamily="helvetica" Foreground="Wheat" FontSize="16" Width="71" />
+                </StackPanel>
+            </Button>
+            <Border BorderBrush="White" Opacity="0.5" BorderThickness="2" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="178" Margin="378,192,0,0"/>
+
+        </Grid>
+    </Border>
+</Window>

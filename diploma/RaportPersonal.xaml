@@ -1,0 +1,50 @@
+﻿<Window x:Class="diploma.RaportPersonal"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:diploma"
+        mc:Ignorable="d"
+        Title="RaportPersonalDidactic" Height="450" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Closing="Window_Closing">
+    <Border CornerRadius="10" Grid.RowSpan="2">
+        <Border.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="#00a5f7" Offset="0.0"/>
+                <GradientStop Color="#0446be" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Border.Background>
+
+        <Grid>
+            <DataGrid Name="RaportGrid" HorizontalAlignment="Left" AutoGenerateColumns="False" Height="303" VerticalAlignment="Top" Width="736" Margin="27,35,0,0">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Nr. total de cadre didactice" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="58" ElementStyle="{StaticResource WrapText}" Binding="{Binding Total}"/>
+                    <DataGridTextColumn Header="Bărbați" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="48" Binding="{Binding Barbati}"/>
+                    <DataGridTextColumn Header="Femei" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="42" Binding="{Binding Femei}"/>
+                    <DataGridTextColumn Header="Cu studii superioare" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="67" Binding="{Binding StSuper}"/>
+                    <DataGridTextColumn Header="Cu studii medii speciale" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="60" Binding="{Binding StMediiSpec}"/>
+                    <DataGridTextColumn Header="Vechimea în muncă sub 8 ani" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="65" Binding="{Binding Vechime_8}"/>
+                    <DataGridTextColumn Header="Vechimea în muncă 8-13 ani" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="65" Binding="{Binding Vechime8_13}"/>
+                    <DataGridTextColumn Header="Vechimea în muncă 13-18 ani" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="65" Binding="{Binding Vechime13_18}"/>
+                    <DataGridTextColumn Header="Vechimea în muncă peste 18 ani" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="75"  Binding="{Binding Vechime18_}"/>
+                    <DataGridTextColumn Header="Nr. cadre didactice care au obținut gradul în anul curent" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="70" Binding="{Binding CadreDidactice}"/>
+                    <DataGridTextColumn Header="Nr. de cadre didactice titulare cu normă deplină" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="65" Binding="{Binding TitulNormDepl}"/>
+                    <DataGridTextColumn Header="Nr. de cadre didactice titulare cu grad managerial" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="75" Binding="{Binding TitulGradMan}"/>
+                    <DataGridTextColumn Header="Nr. de cadre didactice titulare cu grad didactic superior" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="70" Binding="{Binding TitulGradDidSup}"/>
+                    <DataGridTextColumn Header="Nr. de cadre didactice titulare cu grad didactic I" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="65" Binding="{Binding TitulGradDid1}"/>
+                    <DataGridTextColumn Header="Nr. de cadre didactice titulare cu grad didactic II" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="75"  Binding="{Binding TitulGradDid2}"/>
+                    <DataGridTextColumn Header="Nr. de cadre didactice titulare cu grad științific" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="65" Binding="{Binding TitulGradStiin}"/>
+                    <DataGridTextColumn Header="Nr. de cadre didactice titulare fără grad didactic" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="75" Binding="{Binding TitulFaraGrad}"/>
+                    <DataGridTextColumn Header="Nr. de cadre didactice prin cumult cu grad didactic" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="75"  Binding="{Binding CumultCuGrad}"/>
+                    <DataGridTextColumn Header="Nr. de cadre didactice prin cumult fără grad didactic" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width="65" Binding="{Binding CumultFaraGrad}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button Name="Export" Style="{StaticResource but}"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="99" Margin="333,359,0,0" Height="37" Click="Export_Click">
+                <StackPanel Orientation="Horizontal">
+                    <iconPacks:PackIconMaterial Kind="FileExcel" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <Label FontWeight="Light" FontFamily="helvetica" Foreground="White" FontSize="14" Content="Export"/>
+                </StackPanel>
+            </Button>
+        </Grid>
+    </Border>
+</Window>

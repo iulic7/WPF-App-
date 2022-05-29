@@ -1,0 +1,65 @@
+﻿<Window x:Class="diploma.StudiiForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:local="clr-namespace:diploma"
+        mc:Ignorable="d"
+        ResizeMode="CanMinimize"
+        Title="Gestionarea Studiilor" Height="300" Width="400" Closing="Window_Closing" WindowStartupLocation="CenterScreen">
+    <Border  Grid.RowSpan="2">
+        <Border.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="#00a5f7" Offset="0.0"/>
+                <GradientStop Color="#0446be" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Grid>
+            <DataGrid Name="studgrid" HorizontalAlignment="Left" Height="217" Margin="10,24,0,0" VerticalAlignment="Top" Width="175"  FontSize="16">
+                <DataGrid.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Modifica" Click="Modifica"  />
+                        <MenuItem Header="Sterge" Click="Sterge"   />
+                    </ContextMenu>
+                </DataGrid.ContextMenu>
+            </DataGrid>
+            <Image Source="img\ceefmd1.png" Margin="293,10,11,215" />
+            <Label FontWeight="Light" FontFamily="helvetica" Foreground="White" FontSize="14" Content="Indicați studiile:" HorizontalAlignment="Left" Margin="210,107,0,0" VerticalAlignment="Top" Width="113"/>
+            <StackPanel Orientation="Vertical" Margin="210,134,10,88">
+                <TextBox Name="stext" HorizontalAlignment="Left" Height="16"  TextWrapping="Wrap"  VerticalAlignment="Top" Width="168" FontWeight="Light"
+                           FontFamily="helvetica"
+                           FontSize="14"
+                             BorderThickness="0"       
+                           Foreground="White"
+                         Background="Transparent"/>
+                <Border Width="168" 
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+            </StackPanel>
+            <Button Style="{StaticResource but}" Name="AdaugStud"  HorizontalAlignment="Left" Margin="240,201,0,0" VerticalAlignment="Top" Height="30" Width="100" Click="AdaugStud_Click"   >
+                <StackPanel Orientation="Horizontal">
+                    <iconPacks:PackIconMaterial Kind="BookEducation" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <Label Content="Adauga" FontWeight="Light" FontFamily="helvetica" Foreground="White" FontSize="14"/>
+
+                </StackPanel>
+            </Button>
+            <Button Style="{StaticResource but}" Visibility="Hidden" Name="ModificStud"  HorizontalAlignment="Left" Margin="190,201,0,0"   VerticalAlignment="Top" Width="95" Click="ModificStud_Click"   >
+                <StackPanel Orientation="Horizontal">
+                    <iconPacks:PackIconMaterial Kind="BookEdit" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <Label Content="Modifica" FontWeight="Light" FontFamily="helvetica" Foreground="White" FontSize="14"/>
+
+                </StackPanel>
+            </Button>
+            <Button Style="{StaticResource but}" Name="Anuleaza"  HorizontalAlignment="Left" Margin="293,201,0,0"   VerticalAlignment="Top" Height="30" Width="95" Click="Anuleaza_Click" Visibility="Hidden" >
+                <StackPanel Orientation="Horizontal">
+                    <iconPacks:PackIconMaterial Kind="CloseThick" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <Label Content="Anulează" FontWeight="Light" FontFamily="helvetica" Foreground="White" FontSize="14"/>
+
+                </StackPanel>
+            </Button>
+
+        </Grid>
+    </Border>
+</Window>
